@@ -143,14 +143,18 @@ When the program runs, it will ask:
 Everything runs inside encrypted space—there’s no exposure of raw data.
 
 ------
-##  Repository File Descriptions
+## Repository Structure
 
-| File Name                   | Type      | Description                                                                                          | Why It Matters                                                                 |
-|----------------------------|-----------|------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| `README.md`                | Markdown  | Provides project overview, SEAL setup, code usage, inputs, outputs, and concepts.                   | Acts as a complete guide for professors and others to understand your project. |
-| `ckks_insurance_regression.cpp` | C++       | Core logic implementing encrypted regression using Microsoft SEAL CKKS scheme.                      | Demonstrates privacy-preserving analytics through homomorphic encryption.      |
-| `examples.cpp`             | C++       | SEAL example launcher where your function (`ckks_insurance_regression`) is called.                  | Required to compile and run your demo within SEAL’s environment.               |
-| `insurance.csv`            | CSV       | Dataset with numeric fields like `age` and `charges` used for regression input.                     | Feeds data to your encrypted model; real-world simulation for regression.      |
-| `plot_ckks_results.py`     | Python    | Optional script to visualize predictions and benchmarking results from CSV outputs.                 | Enhances report quality by providing graphs and interpretation tools.          |
+| File/Folder               | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| **`/data`**               | Contains input data files (e.g., insurance dataset) used for regression and benchmarking. |
+| **`/docs`**               | Supporting documentation such as dissertation drafts and slides.            |
+| **`/results`**            | Benchmarking outputs including CSV logs and graphs.                         |
+| **`/src`**                | Source code directory containing C++ implementations for CKKS experiments.  |
+| **`README.md`**           | Main project documentation with overview, setup, and usage instructions.    |
+| **`ckks_insurance_regression.cpp`** | Core C++ implementation of encrypted regression using CKKS on insurance data. |
+| **`examples.cpp`**        | Modified SEAL driver file that integrates and runs your CKKS regression code. |
+| **`insurance.csv`**       | Sample dataset with attributes like age, BMI, smoker, region, and charges.   |
+| **`plot_ckks_results.py`**| Python script for visualising benchmarking outputs and prediction results.   |
 
 ---
