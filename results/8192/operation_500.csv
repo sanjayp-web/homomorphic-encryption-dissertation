@@ -1,0 +1,8 @@
+operation,time_us,mem_kb
+encode,227,55884
+encrypt,1726,55884
+add,21,55884
+multiply+relin+rescale,1349,55884
+rotate,971,55884
+decrypt,58,55884
+decode,479,55884
